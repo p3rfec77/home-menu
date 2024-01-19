@@ -4,4 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Onest", sans-serif;
+}
+
+:root {
+  --main-bg-color: #f7f4ed;
+  --main-text-color: #363636;
+}
+
+body {
+  background-color: var(--main-bg-color);
 }

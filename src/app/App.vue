@@ -1,7 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from "../shared/components/Header.vue";
+</script>
 
 <template>
-  <div>hello world</div>
+  <Header />
+  <div :class="$style.wrapper"></div>
 </template>
 
-<style scoped module></style>
+<style scoped module lang="scss">
+.wrapper {
+  width: 100%;
+  min-height: 80vh;
+  padding: 0px 75px;
+}
+</style>
