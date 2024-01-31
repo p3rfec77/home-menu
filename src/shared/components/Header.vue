@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   gap: 25px;
   padding: 20px 75px;
-  background-color: #fff;
+  background-color: var(--secondary-bg-color);
   color: var(--main-text-color);
 
   .heading {

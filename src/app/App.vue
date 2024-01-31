@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import Header from "../shared/components/Header.vue";
+import CategoriesList from "../shared/components/CategoriesList.vue";
 </script>
 
 <template>
   <Header />
-  <div :class="$style.wrapper"></div>
+  <main :class="$style.wrapper">
+    <CategoriesList />
+  </main>
 </template>
 
 <style scoped module lang="scss">

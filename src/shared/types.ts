@@ -1,9 +1,9 @@
-export interface Dish {
+export interface IDish {
   title: string;
   description: string;
 }
 
-export interface MenuCategory {
+export interface IMenuCategory {
   titile: string;
-  dishes: Dish[];
+  dishes: IDish[];
 }

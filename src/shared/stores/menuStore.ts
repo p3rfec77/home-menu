@@ -1,12 +1,12 @@
 import { defineStore } from "pinia";
 
-import type { MenuCategory } from "../types";
+import type { IMenuCategory } from "../types";
 
 interface IMenuStore {
-  categories: MenuCategory[];
+  categories: IMenuCategory[];
 }
 
-export const useMenuStore = defineStore("menu", {
+const useMenuStore = defineStore("menu", {
   state: (): IMenuStore => ({
     categories: [
       { titile: "Завтраки", dishes: [] },
@@ -19,3 +19,5 @@ export const useMenuStore = defineStore("menu", {
     ],
   }),
 });
+
+export default useMenuStore;
