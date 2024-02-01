@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { IDish } from "../types";
 import Dish from "./Dish.vue";
+import AddButton from "./AddButton.vue";
+import RemoveButton from "./RemoveButton.vue";
 
 interface CategoryProps {
   titile: string;
@@ -10,10 +12,13 @@ const { dishes, titile } = defineProps<CategoryProps>();
 </script>
 <template>
   <li :class="$style.category">
-    <h3 :class="$style.title" :id="titile">{{ titile }}</h3>
+    <div>
+      <h3 :class="$style.title" :id="titile">{{ titile }}</h3>
+      <RemoveButton :on-click="() => {}" />
+    </div>
     <ul v-if="dishes.length > 0" :class="$style.dishes_list">
       <Dish v-for="dish in dishes" :dish="dish" :key="dish.title" />
-      <button>add dish</button>
+      <AddButton :on-click="() => console.log('aaa')" />
     </ul>
   </li>
 </template>

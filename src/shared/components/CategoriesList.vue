@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Category from "./Category.vue";
 import useMenuStore from "../stores/menuStore";
+import AddButton from "./AddButton.vue";
 
 const { categories } = useMenuStore();
 </script>
@@ -14,6 +15,10 @@ const { categories } = useMenuStore();
       :key="category.titile"
     />
   </ul>
+  <div>
+    <AddButton :on-click="() => console.log('add')" />
+    <p>добавить Категорию</p>
+  </div>
 </template>
 
 <style lang="scss" module scoped>

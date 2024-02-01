@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { IDish } from "../types";
+import RemoveButton from "./RemoveButton.vue";
 
 interface DishProps {
   dish: IDish;
@@ -10,7 +11,7 @@ const { dish } = defineProps<DishProps>();
 <template>
   <li :class="$style.dish">
     <p>{{ dish.title }}</p>
-    <button>X</button>
+    <RemoveButton :on-click="() => {}" />
   </li>
 </template>
 
