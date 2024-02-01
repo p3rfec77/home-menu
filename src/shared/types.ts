@@ -1,6 +1,6 @@
 export interface IDish {
   title: string;
-  description: string;
+  description?: string;
 }
 
 export interface IMenuCategory {

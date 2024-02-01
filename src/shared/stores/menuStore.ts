@@ -9,7 +9,7 @@ interface IMenuStore {
 const useMenuStore = defineStore("menu", {
   state: (): IMenuStore => ({
     categories: [
-      { titile: "Завтраки", dishes: [] },
+      { titile: "Завтраки", dishes: [{ title: "asaad" }, { title: "asd" }] },
       { titile: "Закуски", dishes: [] },
       { titile: "Салаты", dishes: [] },
       { titile: "Супы", dishes: [] },
