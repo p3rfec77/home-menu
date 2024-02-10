@@ -1,12 +1,9 @@
 <script setup lang="ts">
-interface RemoveButtonProps {
-  onClick: () => void;
-}
-const { onClick } = defineProps<RemoveButtonProps>();
+const emit = defineEmits(["onClick"]);
 </script>
 
 <template>
-  <button :on-click="onClick">remove smth</button>
+  <button @click="emit('onClick')">remove smth</button>
 </template>
 
 <style lang="scss" module scoped></style>

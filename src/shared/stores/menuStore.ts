@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-import type { IMenuCategory } from "../types";
+import type { IDish, IMenuCategory } from "../types";
 
 interface IMenuStore {
   categories: IMenuCategory[];
@@ -18,6 +18,18 @@ const useMenuStore = defineStore("menu", {
       { titile: "Десерты", dishes: [] },
     ],
   }),
+  actions: {
+    addDish(dish: IDish, categoryTitle: string) {
+      const categoryForAdding = this.categories.find(
+        (category) => category.titile === categoryTitle
+      );
+      this.categories.forEach((category) => {
+        if (category === categoryForAdding) {
+          category.dishes.push(dish);
+        }
+      });
+    },
+  },
 });
 
 export default useMenuStore;
