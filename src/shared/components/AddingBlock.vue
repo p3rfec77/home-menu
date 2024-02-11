@@ -3,15 +3,11 @@ import AddButton from "./AddButton.vue";
 import RemoveButton from "./RemoveButton.vue";
 
 interface AddingBlockProps {
-  modelValue: unknown;
+  modelValue: string | undefined;
 }
 
 const emit = defineEmits(["add", "remove", "update:modelValue"]);
 const { modelValue } = defineProps<AddingBlockProps>();
-
-// const addByEnter = (e) => {
-//   if(e.target.key)
-// }
 </script>
 
 <template>
@@ -20,6 +16,7 @@ const { modelValue } = defineProps<AddingBlockProps>();
       @input="
         emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
+      @keydown.enter="emit('add')"
       :value="modelValue"
     />
     <div>
